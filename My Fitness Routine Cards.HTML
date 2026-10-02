@@ -1,0 +1,50 @@
+<!--In this assignment, you will build a fitness routine webpage using HTML and CSS. You will create multiple routine cards and use the CSS box model to control the content area, padding, border, and margin. You will also use float to arrange the cards side by side and clear to start a new row cleanly.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Routine Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .routine-card {
+            background-color: #ffffff;
+            border: 2px solid #cccccc;
+            width: 300px;
+            padding: 20px;
+            margin: 20px;
+            float: left;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <div class="clearfix">
+        <div class="routine-card">
+            <h2>Morning Routine</h2>
+            <p>Exercise: Jogging</p>
+            <p>Duration: 30 minutes</p>
+            <p>Focus: Cardio</p>
+        </div>
+        <div class="routine-card">
+            <h2>Afternoon Routine</h2>
+            <p>Exercise: Weight Lifting</p>
+            <p>Duration: 45 minutes</p>
+            <p>Focus: Strength</p>
+        </div>
+        <div class="routine-card">
+            <h2>Evening Routine</h2>
+            <p>Exercise: Yoga</p>
+            <p>Duration: 60 minutes</p>
+            <p>Focus: Flexibility</p>
+        </div>
+    </div>
+</body>
+</html>
